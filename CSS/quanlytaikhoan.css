@@ -1,0 +1,160 @@
+/* Nút chung */
+#btnthem, #btnsua, #btnxoa, #showsua {
+    width: 100px;
+    height: 35px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background: #4CAF50;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btnthem:hover, #btnsua:hover, #btnxoa:hover, #showsua:hover {
+    transform: translateY(-2px);
+}
+
+#btnxoa {
+    background: #E74C3C; 
+}
+
+#btnxoa:hover {
+    background: #C0392B;
+}
+
+/* Nút thêm tài khoản */
+#themtaikhoan {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: #3498DB;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#themtaikhoan:hover {
+    background: #2C81BA;
+    transform: translateY(-2px);
+}
+
+/* Form thêm và sửa */
+#formthem, #formsua {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #FDFEFE;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.group1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -20px;
+}
+
+.group1 div {
+    font-weight: bold;
+    color: #34495E;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: start;
+}
+
+.group1 input {
+    height: 35px;
+    padding: 5px 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Bảng danh sách tài khoản */
+table {
+    width: 80%; 
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 14px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background: #FFFFFF; 
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+thead th {
+    background: #34495E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #BDC3C7;
+}
+
+tbody td {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #E5E8E8;
+}
+
+/* tbody tr:nth-child(even) {
+    background: #F8F9F9; 
+} */
+
+tbody tr:hover {
+    background: #EAEDED; 
+}
+
+/* Bố cục tổng thể */
+.post-container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 900px;
+    background: #FBFCFC;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Thêm khoảng cách hợp lý */
+table {
+    margin-top: 40px;
+}
+
+table th, table td {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hiệu ứng chuyển động khi hover */
+table tbody tr {
+    transition: background-color 0.3s ease-in-out;
+}

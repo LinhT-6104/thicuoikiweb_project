@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS//gioithieucacnghanh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/index.js" defer></script>
+    <title>Giới thiệu các nghành</title>
+</head>
+
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left"> 
+                <!-- Tìm kiếm -->
+                <li>
+                    <!-- input -->
+                    <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                    <!-- icon -->
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
+
+                <!-- Tuyển sinh -->
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="submenu">
+                        <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                    </ul>
+                </li>
+
+                <!-- admin -->
+                <!-- Đăng tin tuyển sinh -->
+                <li id="dangtints"><a>Đăng tin</a></li>
+
+                <!-- Quản lý -->
+                <li id="quanly">
+                    <a href="#">Quản lý</a>
+                    <ul class="submenu">
+                        <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                        <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                    </ul>
+                </li> 
+                <!--  -->
+
+                <!-- user -->
+                <!-- Thông tin -->
+                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+                <!--  -->
+
+                <!-- Trang chủ -->
+                <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+                <li class="login">
+                    <a href="#" id="login">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng nhập</p>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#" id="logout">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng xuất</p>
+                    </a>
+                </li>
+                <li class="cont">
+                    <a id="cont">
+                        <i class="fas fa-envelope" class="logo"></i>
+                        <p id="hide">Liên hệ</p>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- code -->
+    <div class="grid-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="/IMG/khoatoan.jpg" alt="Toán học (dạy bằng Tiếng Anh)">
+            <p class="date">22/04/2019</p>
+            <h3>Cử nhân Sư phạm Toán học (dạy Toán bằng Tiếng Anh)</h3>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="/IMG/khoatoan.jpg" alt="Toán học">
+            <p class="date">21/04/2019</p>
+            <h3>Cử nhân toán học</h3>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="/IMG/khoacntt.png" alt="Sư phạm Tin học">
+            <p class="date">20/04/2019</p>
+            <h3>Cử nhân Sư phạm Tin học</h3>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="/IMG/khoacntt.png" alt="Tin học bằng Tiếng Anh">
+            <p class="date">17/04/2019</p>
+            <h3>Cử nhân Sư phạm Tin học (Dạy Tin học bằng Tiếng Anh)</h3>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="/IMG/khoacntt.png" alt="Công nghệ thông tin">
+            <p class="date">16/04/2019</p>
+            <h3>Cử nhân Công nghệ thông tin</h3>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="/IMG/khoaly.jpg" alt="Sư phạm Vật lý">
+            <p class="date">15/04/2019</p>
+            <h3>Cử nhân Sư phạm Vật lý</h3>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/lienhe.css">
+    <script src="/JS/index.js" defer></script>
+    <title>Liên hệ</title>
+</head>
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left"> 
+                <!-- Tìm kiếm -->
+                <li>
+                    <!-- input -->
+                    <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                    <!-- icon -->
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
+
+                <!-- Tuyển sinh -->
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="submenu">
+                        <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                    </ul>
+                </li>
+
+                <!-- admin -->
+                <!-- Đăng tin tuyển sinh -->
+                <li id="dangtints"><a>Đăng tin</a></li>
+
+                <!-- Quản lý -->
+                <li id="quanly">
+                    <a href="#">Quản lý</a>
+                    <ul class="submenu">
+                        <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                        <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                    </ul>
+                </li> 
+                <!--  -->
+
+                <!-- user -->
+                <!-- Thông tin -->
+                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+                <!--  -->
+
+                <!-- Trang chủ -->
+                <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+                <li class="login">
+                    <a href="#" id="login">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng nhập</p>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#" id="logout">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng xuất</p>
+                    </a>
+                </li>
+                <li class="cont">
+                    <a id="cont">
+                        <i class="fas fa-envelope" class="logo"></i>
+                        <p id="hide">Liên hệ</p>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="noiDung">
+        <div>
+            <header class="title">
+                <h1>Chào mừng bạn đến với trang tuyển sinh HNUE</h1>
+                <p>Đây là nơi cung cấp thông tin chính thức về tuyển sinh trường Đại học sư phạm Hà Nội</p>
+            </header>
+            <main class="main-content">
+                <section class="info">
+                    <h2>Thông tin liên hệ</h2>
+                    <ul>
+                        <li><strong>Địa chỉ:</strong> 136 Xuân Thuỷ, Cầu Giấy, Hà Nội</li>
+                        <li><strong>Hotline:</strong> 0865.911.136</li>
+                        <li><strong>Email:</strong> <a href="mailto:tuvantuyensinh@hnue.edu.vn">tuvantuyensinh@hnue.edu.vn</a></li>
+                        <li><strong>Website:</strong> <a href="http://tuyensinh.hnue.edu.vn/" target="_blank">tuyensinh.hnue.edu.vn</a></li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        
+        <div>
+            <footer class="footer">
+                <p>Phát triển và quản lý bởi Trung tâm CNTT 2024</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

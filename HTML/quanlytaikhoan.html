@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/dangtin.css">
+    <link rel="stylesheet" href="/CSS/quanlytaikhoan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/index.js" defer></script>
+    <script src="/JS/taikhoan.js"></script>
+    <title>Quản lý tài khoản</title>
+</head>
+
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left"> 
+                <!-- Tìm kiếm -->
+                <li>
+                    <!-- input -->
+                    <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                    <!-- icon -->
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
+
+                <!-- Tuyển sinh -->
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="submenu">
+                        <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                    </ul>
+                </li>
+
+                <!-- admin -->
+                <!-- Đăng tin tuyển sinh -->
+                <li id="dangtints"><a>Đăng tin</a></li>
+
+                <!-- Quản lý -->
+                <li id="quanly">
+                    <a href="#">Quản lý</a>
+                    <ul class="submenu">
+                        <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                        <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                    </ul>
+                </li> 
+                <!--  -->
+
+                <!-- user -->
+                <!-- Thông tin -->
+                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+                <!--  -->
+
+                <!-- Trang chủ -->
+                <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+                <li class="login">
+                    <a href="#" id="login">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng nhập</p>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#" id="logout">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng xuất</p>
+                    </a>
+                </li>
+                <li class="cont">
+                    <a id="cont">
+                        <i class="fas fa-envelope" class="logo"></i>
+                        <p id="hide">Liên hệ</p>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- code -->
+    <div class="post-container">
+        <h1>Quản lý tài khoản</h1>
+        <button id="themtaikhoan">Thêm tài khoản</button>
+
+        <form action="" id="formthem">
+            <h2>Thêm tài khoản</h2>
+
+            <label for="nameID" class="group1">
+                <div>Thêm tên đăng nhập</div>
+                <input type="text" id="nameID" name="nameID" placeholder="Tên đăng nhập" required>
+            </label>
+            <br><br>
+
+            <label for="cccd" class="group1">
+                <div>Thêm mã căn cước công dân</div>
+                <input type="text" id="cccd" name="cccd" placeholder="Căn cước công dân" required>
+            </label>
+            <br><br>
+
+            <label for="fullname" class="group1">
+                <div>Thêm họ và tên</div>
+                <input type="text" id="fullname" name="fullname" placeholder="Họ và tên" required>
+            </label>
+            <br><br>
+
+            <label for="email" class="group1">
+                <div>Thêm email</div>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+            </label>
+            <br><br>
+            
+            <label for="pass" class="group1">
+                <div>Thêm mật khẩu</div>
+                <input type="text" id="pass" name="pass" placeholder="Mật khẩu" required>
+            </label>
+            <br><br>
+
+            <button id="btnthem" class="in" type="button" onclick="kiemtradangky()">Thêm</button>
+        </form>
+
+        <form action="" id="formsua">
+            <h2>Sửa tài khoản</h2>
+
+            <label for="renameID" class="group1">
+                <div>Sửa tên đăng nhập</div>
+                <input type="text" id="renameID" name="renameID" placeholder="Tên đăng nhập" required>
+            </label>
+            <br><br>
+
+            <label for="recccd" class="group1">
+                <div>Sửa mã căn cước công dân</div>
+                <input type="text" id="recccd" name="recccd" placeholder="Mã căn cước công dân" required>
+            </label>
+            <br><br>
+
+            <label for="refullname" class="group1">
+                <div>Sửa họ và tên</div>
+                <input type="text" id="refullname" name="refullname" placeholder="Họ và tên" required>
+            </label>
+            <br><br>
+
+            <label for="reemail" class="group1">
+                <div>Sửa email</div>
+                <input type="text" id="reemail" name="reemail" placeholder="Email" required>
+            </label>
+            <br><br>
+
+            <label for="repass" id="group1">
+                <div>Sửa mật khẩu</div>
+                <input type="text" id="repass" name="repass" placeholder="Mật khẩu" required>
+            </label>
+            <br><br>
+
+            <button id="btnsua" class="in" type="button">Sửa</button>
+        </form>
+
+        <div>
+            <h2>Danh sách tài khoản</h2>
+
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên tài khoản</th>
+                        <th>Mật khẩu</th>
+                        <th>Hành động</th>
+                    </tr>
+                    <tbody id="bangthem">
+                        <!-- Thêm cột -->
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

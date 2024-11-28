@@ -1,0 +1,130 @@
+.dangky {
+    display: flex;
+    height: fit-content;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif; 
+}
+
+.left_dangky {
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.left_dangky img {
+    width: 100%;
+    height: 120vh;
+    object-fit: cover; 
+}
+
+.right_dangky>img{
+    width: 100px;
+    height: 100px;
+}
+
+.right_dangky {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background-color:gainsboro;
+    border: 1px solid black;
+}
+
+.right_dangky .title {
+    color:#233153;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.right_dangky .dangky1{
+    border: 1px solid black;
+    padding: 30px;
+    background-color: white;
+}
+
+.dky1>p{
+    text-align: left;
+    font-size: 15px;
+    color: #A6ABB1;
+}
+.red{
+    color: red;
+}
+.right_dangky .dangky1 h1 {
+    color: #305787;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.right_dangky .dangky1 input {
+    width: 350px;
+    padding: 12px;
+    margin: 9px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.right_dangky .dangky1 input:focus {
+    border-color: #0044cc;
+    box-shadow: 0 0 5px rgba(0, 68, 204, 0.5); 
+}
+
+.dky2 {
+    width: 100%;
+    padding: 12px;
+    background-color: #305787; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease
+}
+
+.dky2:hover {
+    background-color: #0033a0; 
+}
+
+.dky3 a {
+    font-size: 16px;
+    color: #305787;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dky3 a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+    .dangky {
+        flex-direction: column; 
+    }
+
+    .left_dangky {
+        width: 100%;
+        height: auto; 
+    }
+
+    .right_dangky {
+        width: 100%;
+        height: auto;
+    }
+}

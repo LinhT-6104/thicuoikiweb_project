@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/quanlyhoso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/index.js" defer></script>
+    <script src="/JS/hoso.js"></script>
+    <title>Quản lý hồ sơ</title>
+</head>
+
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left"> 
+                <!-- Tìm kiếm -->
+                <li>
+                    <!-- input -->
+                    <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                    <!-- icon -->
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
+
+                <!-- Tuyển sinh -->
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="submenu">
+                        <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                    </ul>
+                </li>
+
+                <!-- admin -->
+                <!-- Đăng tin tuyển sinh -->
+                <li id="dangtints"><a>Đăng tin</a></li>
+
+                <!-- Quản lý -->
+                <li id="quanly">
+                    <a href="#">Quản lý</a>
+                    <ul class="submenu">
+                        <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                        <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                    </ul>
+                </li> 
+                <!--  -->
+
+                <!-- user -->
+                <!-- Thông tin -->
+                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+                <!--  -->
+
+                <!-- Trang chủ -->
+                <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+                <li class="login">
+                    <a href="#" id="login">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng nhập</p>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#" id="logout">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng xuất</p>
+                    </a>
+                </li>
+                <li class="cont">
+                    <a id="cont">
+                        <i class="fas fa-envelope" class="logo"></i>
+                        <p id="hide">Liên hệ</p>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- code -->
+    <div class="post-container">
+        <h1>Quản lý hồ sơ</h1>
+        
+        <select name="" id="xemtrangthaiduyet">
+            <option value="all" selected>Tất cả</option>
+            <option value="wait">Chờ duyệt</option>
+            <option value="ok">Đã duyệt</option>
+            <option value="bonus">Yêu cầu bổ sung thông tin</option>
+            <option value="no">Không duyệt</option>
+        </select>
+        <br>
+
+        <div>
+            <table class="duyet" border="1px">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã hồ sơ</th>
+                        <th>Họ và tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Điện thoại</th>
+                        <th>Trạng thái</th>
+                        <th>Xét duyệt</th>
+                    </tr>
+                    <tbody id="bangthem">
+                        <!-- Thêm cột -->
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

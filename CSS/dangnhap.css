@@ -1,0 +1,118 @@
+.dangnhap {
+    display: flex; 
+    background-color:#f5f5f5; 
+    font-family: Arial, sans-serif; 
+}
+
+.left_dangnhap {
+    width: 70%;
+}
+.left_dangnhap img {
+    width: 100%;
+    height: 100%    ;
+    object-fit: cover; 
+}
+
+.right_dangnhap {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; 
+    background-color: gainsboro; 
+    border: 2px solid black;
+}
+
+.login1>p{
+    text-align: left;
+    font-size: 15px;
+    color: #A6ABB1;
+}
+.title{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#233153;
+    margin-bottom: 40px;
+}
+
+.right_dangnhap>img{
+    width: 100px;
+    height: 100px;
+}
+
+.right_dangnhap .login1 h1 {
+    color:#305787; 
+    font-size: 32px;
+    text-align: left
+}
+
+.right_dangnhap .login1{
+    border: 1px solid black;
+    padding: 35px;
+    background-color: white;
+}
+
+.right_dangnhap .login1 input {
+    width: 300px;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid black;
+    border-radius: 8px; 
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.right_dangnhap .login1 input:focus {
+    border-color: #0044cc; 
+    box-shadow: 0 0 5px rgba(0, 68, 204, 0.5); 
+}
+
+.dn2 {
+    width: 100%;
+    padding: 12px;
+    background-color: #305787; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dn2:hover {
+    background-color: #0033a0; 
+}
+
+.dn3 a {
+    font-size: 16px;
+    color: #305787; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dn3 a:hover {
+    text-decoration: underline; 
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ddd; 
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .dangnhap {
+        flex-direction: column;  
+    }
+    .left_dangnhap {
+        width: 100%;
+        height: 50vh; 
+    }
+    .right_dangnhap {
+        width: 100%;
+        height: auto;
+    }
+}

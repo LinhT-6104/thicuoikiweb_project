@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='/CSS/index.css'>
+    <link rel='stylesheet' href='/CSS/dangtin.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>
+    <script src='/JS/index.js' defer></script>
+    <script src='/JS/dangtin.js'></script>
+    <title>Đăng tin</title>
+</head>
+
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left"> 
+                <!-- Tìm kiếm -->
+                <li>
+                    <!-- input -->
+                    <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                    <!-- icon -->
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
+
+                <!-- Tuyển sinh -->
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="submenu">
+                        <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                    </ul>
+                </li>
+
+                <!-- admin -->
+                <!-- Đăng tin tuyển sinh -->
+                <li id="dangtints"><a>Đăng tin</a></li>
+
+                <!-- Quản lý -->
+                <li id="quanly">
+                    <a href="#">Quản lý</a>
+                    <ul class="submenu">
+                        <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                        <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                    </ul>
+                </li> 
+                <!--  -->
+
+                <!-- user -->
+                <!-- Thông tin -->
+                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+                <!--  -->
+
+                <!-- Trang chủ -->
+                <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+                <li class="login">
+                    <a href="#" id="login">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng nhập</p>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#" id="logout">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng xuất</p>
+                    </a>
+                </li>
+                <li class="cont">
+                    <a id="cont">
+                        <i class="fas fa-envelope" class="logo"></i>
+                        <p id="hide">Liên hệ</p>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- code -->
+    <div id='post-container'>
+        <button id='thembaibtn'>Thêm bài đăng</button>
+        <form id='formdangbai'>
+            <h1>Đăng bài</h1>
+
+            <!-- Tiêu đề -->
+            <label for='tieude'>
+                <div>Tiêu đề</div>
+                <input type='text' id='tieude' required>
+            </label>
+            <br> <br>
+
+            <!-- Mô tả -->
+            <label for='mota'>
+                <div>Mô tả</div>
+                <input type='text' id='mota' required>
+            </label>
+            <br><br>
+
+            <!-- Ảnh -->
+            <label for='anhnoibat'>
+                <div>Ảnh nổi bật</div>
+                <input type='file' id='anhnoibat' width='500px' required> <br>
+            </label> <br>
+            <div>
+                <img id='hienthianh' style='display: none;'>
+            </div>            
+            <br><br>
+
+            
+            <!-- Nội dung -->
+            <label for='noidung'>
+                <div>Nội dung</div>
+                <textarea id='noidung' cols='30' rows='10' required></textarea>
+            </label>
+            <br><br>
+
+            <!-- nút đăng tin -->
+            <button id="dangtinbtn" type='button' onclick='dangtin()'>Đăng tin</button>
+        </form>
+        <form id='formsuabai'>
+            <h1>Sửa bài đăng</h1>
+
+            <!-- Tiêu đề -->
+            <label for='re_tieude'>
+                <div>Tiêu đề</div>
+                <input type='text' id='re_tieude' required>
+            </label>
+            <br> <br>
+
+            <!-- Mô tả -->
+            <label for='re_mota'>
+                <div>Mô tả</div>
+                <input type='text' id='re_mota' required>
+            </label>
+            <br><br>
+
+            <!-- Ảnh -->
+            <label for='re_anhnoibat'>
+                <div>Ảnh nổi bật</div>
+                <input type='file' id='re_anhnoibat' width='500px' required>
+            </label>
+            <div>
+                <img id='re_hienthianh' style='display: none;'>
+            </div>
+            <br>
+
+            <!-- Nội dung -->
+            <label for='re_noidung'>
+                <div>Nội dung</div>
+                <textarea id='re_noidung' cols='30' rows='10' required></textarea>
+            </label>
+            <br><br>
+
+            <!-- nút đăng bài -->
+            <button id='btnsua' type='button'>Sửa tin</button>
+        </form>
+
+        <!-- Hiển thị bài đăng -->
+        <h2>Bài đăng của bạn</h2>
+        <div>
+            <table border='1px' class='dang'>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th class='td'>Tiêu đề</th>
+                        <th>Mô tả</th>
+                        <th>Ngày đăng</th>
+                        <th>Hoạt động</th>
+                    </tr>
+                </thead>
+                <tbody id='bangthem'>
+                    <!-- Thêm cột -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

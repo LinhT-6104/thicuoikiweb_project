@@ -1,0 +1,107 @@
+.noiDung {
+    display: flex;
+    flex-direction: column;
+    min-height: 93.5%;
+    justify-content: space-between;
+    background: #faf9f7; 
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header title */
+.title {
+    background: #2f87c5;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 45px; 
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.title p {
+    margin: 10px 0 0;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    color: #444;
+    line-height: 28.8px;
+    text-align: left;
+}
+
+/* Thông tin liên hệ */
+.info h2 {
+    color: #2A5D84; 
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info li {
+    margin: 15px 0;
+    font-size: 19.2px; 
+}
+
+.info a {
+    color: #2A5D84; 
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.info a:hover {
+    text-decoration: underline;
+    color: #17496A; 
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #fdfdfd;
+    color: #666;
+    font-size: 16px;
+    border-top: 2px solid #EEE;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    .info li {
+        font-size: 16px;
+    }
+
+    .title h1 {
+        font-size: 35.2px; 
+    }
+
+    .title p {
+        font-size: 17.6px;
+    }
+}

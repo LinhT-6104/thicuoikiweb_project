@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/dangky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/index.js" defer></script>
+    <script src="/JS/dangky.js" defer></script>
+    <title>Đăng ký</title>
+</head>
+
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left">
+                <!-- Tìm kiếm -->
+            <li>
+                <!-- input -->
+                <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                <!-- icon -->
+                <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+            </li>
+
+            <!-- Tuyển sinh -->
+            <li>
+                <a href="#">Tuyển sinh</a>
+                <ul class="submenu">
+                    <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                    <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                </ul>
+            </li>
+
+            <!-- admin -->
+            <!-- Đăng tin tuyển sinh -->
+            <li id="dangtints"><a>Đăng tin</a></li>
+
+            <!-- Quản lý -->
+            <li id="quanly">
+                <a href="#">Quản lý</a>
+                <ul class="submenu">
+                    <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                    <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                </ul>
+            </li>
+            <!--  -->
+
+            <!-- user -->
+            <!-- Thông tin -->
+            <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+            <!--  -->
+
+            <!-- Trang chủ -->
+            <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+            <li class="login">
+                <a href="#" id="login">
+                    <i class="fas fa-user" class="logo"></i>
+                    <p id="hide">Đăng nhập</p>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#" id="logout">
+                    <i class="fas fa-user" class="logo"></i>
+                    <p id="hide">Đăng xuất</p>
+                </a>
+            </li>
+            <li class="cont">
+                <a id="cont">
+                    <i class="fas fa-envelope" class="logo"></i>
+                    <p id="hide">Liên hệ</p>
+                </a>
+            </li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- code -->
+    <div class="dangky">
+        <div class="left_dangky">
+            <img src="/IMG/Banner.jpg" alt="">
+        </div>
+        <div class="right_dangky">
+            <img src="/IMG/hnue_icon.png" alt="">
+            <div class="title">
+                <h4>TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI</h4>
+                <h2>CỔNG THÔNG TIN TUYỂN SINH</h2>
+            </div>
+
+            <div class="dangky1">
+                <div class="dky1">
+                    <h1>ĐĂNG KÝ</h1>
+                    <p>Cổng thông tin tuyển sinh</p>
+                    <!-- <p><span class="red">*</span>Email của bạn sẽ được dùng làm tên đăng nhập</p> -->
+                </div>
+                <input id="nameID" type="text" placeholder="Tên đăng nhập">
+                <input id="cccd" type="text" placeholder="CMND/CCCD">
+                <input id="fullname" type="text" placeholder="Họ và tên">
+                <input id="email" type="text" placeholder="Email">
+                <input id="pass" type="password" placeholder="Mật khẩu">
+                <input id="repass" type="password" placeholder="Nhập lại mật khẩu">
+                <button class="dky2" onclick="dkytk()">Đăng ký</button>
+                <hr>
+                <div class="dky3">
+                    <a onclick="navigateTo('/HTML/dangnhap.html')">Đã có tài khoản</a>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

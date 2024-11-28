@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS//thongtinhoso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/index.js" defer></script>
+    <script src="/JS/hoso.js"></script>
+    <title>Thông tin hồ sơ</title>
+</head>
+
+<body>
+    <!-- Thanh menu -->
+    <div class="header">
+        <ul class="menu1">
+            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li id="date"></li>
+            <li id="taikhoan"></li>
+        </ul>
+
+        <!-- Icon rút gọn -->
+        <div class="nut" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menu -->
+        <ul class="menu" id="menu">
+            <li id="left"> 
+                <!-- Tìm kiếm -->
+                <li>
+                    <!-- input -->
+                    <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
+                    <!-- icon -->
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
+
+                <!-- Tuyển sinh -->
+                <li>
+                    <a href="#">Tuyển sinh</a>
+                    <ul class="submenu">
+                        <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                    </ul>
+                </li>
+
+                <!-- admin -->
+                <!-- Đăng tin tuyển sinh -->
+                <li id="dangtints"><a>Đăng tin</a></li>
+
+                <!-- Quản lý -->
+                <li id="quanly">
+                    <a href="#">Quản lý</a>
+                    <ul class="submenu">
+                        <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
+                        <li id="quanlitk"><a>Quản lý tài khoản</a></li>
+                    </ul>
+                </li> 
+                <!--  -->
+
+                <!-- user -->
+                <!-- Thông tin -->
+                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
+                <!--  -->
+
+                <!-- Trang chủ -->
+                <li id="trangchu"><a>Trang chủ</a></li>
+            </li>
+
+            <li id="right">
+                <li class="login">
+                    <a href="#" id="login">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng nhập</p>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#" id="logout">
+                        <i class="fas fa-user" class="logo"></i>
+                        <p id="hide">Đăng xuất</p>
+                    </a>
+                </li>
+                <li class="cont">
+                    <a id="cont">
+                        <i class="fas fa-envelope" class="logo"></i>
+                        <p id="hide">Liên hệ</p>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- code -->
+    <div class="dkithongtin">
+        <h2>THÔNG TIN THÍ SINH</h2>
+        <h2 id="trangthaihs">Yêu cầu nhập thông tin</h2>
+        <hr>
+        <h4>1. Thông tin cá nhân</h4>
+        <form action="" class="Dong1">
+            <input id="hoten" type="text" placeholder="Tên đầy đủ" required>
+            <input id="ngaysinh" type="text" placeholder="Ngày sinh (dd/mm/yyyy)" required>
+            <input id="socccd" type="text" placeholder="Số CCCD" required>
+        </form>
+
+        <form action="" class="Dong2">
+            <input id="ngaycap" name="ngaycap" type="text" placeholder="Ngày cấp CCCD (dd/mm/yyyy)" required>
+            <input id="noicap" type="text" placeholder="Nơi cấp CCCD" required>
+            <select id="gioitinh" name="Giới tính" id="" required>
+                <option value="" selected hidden>Giới tính</option>
+                <option value="nam">Nam</option>
+                <option value="nữ">Nữ</option>
+                <option value="khác">Khác</option>
+            </select>
+        </form>
+
+        <form action="" class="Dong3">
+            <select name="Nơi sinh" id="noisinh" required>
+                <option value="" selected hidden>Nơi sinh</option>
+            </select>
+            <select name="Dân tộc" id="dantoc" required>
+                <option value="" selected hidden>Dân tộc</option>
+            </select>
+        </form>
+
+        <h4>2. Thông tin liên hệ</h4>
+        <form class="Dong4">
+            <input id="sodt" type="text" placeholder="Số điện thoại" required>
+            <input id="sodt_nguoithan" type="text" placeholder="SĐT người thân" required>
+            <input id="email" type="text" placeholder="Email">
+        </form>
+
+        <h4>3. Địa chỉ hộ khẩu thường trú</h4>
+        <form action="" class="Dong5">
+            <select name="Tỉnh/thành" id="tinh_thanh_thuongtru" required>
+                <option value="" selected hidden>Tỉnh/thành thường trú</option>
+            </select>
+            <input id="quan_huyen_thuongtru" type="text" placeholder="Quận/huyện thường trú" required>
+            <input id="phuong_xa_thuongtru" type="text" placeholder="Phường/xã thường trú" required>
+        </form>
+        <form action="" class="Dong6">
+            <input id="diachicuthe" type="text" placeholder="Địa chỉ cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn">
+        </form>
+
+        <h4>4. Địa chỉ liên lạc</h4>
+        <form action="" class="Dong7">
+            <input id="tinh_thanh_lienlac" type="text" placeholder="Tỉnh/thành địa chỉ liên lạc">
+            <input id="quan_huyen_lienlac" type="text" placeholder="Quận/huyện địa chỉ liên lạc">
+            <input id="phuong_xa_lienlac" type="text" placeholder="Phường/xã địa chỉ liên lạc">
+        </form>
+        <form action="" class="Dong8">
+            <input id="diachilienlac" type="text" placeholder="Địa chỉ liên lạc cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn">
+        </form>
+
+        <button id="luu" onclick="luuhoso()">Lưu</button>
+    </div>
+</body>
+
+</html>
