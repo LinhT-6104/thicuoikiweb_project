@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     searchBar.addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
-            navigateTo('/index.html');
             timKiem();
         }
     });   
@@ -132,7 +131,7 @@ window.isAdmin = function () {
     if (logout) { logout.style.display = 'none'; }
     if (taikhoan) { taikhoan.style.display = 'none'; }
     
-
+    // Ẩn các mục theo tai khoan
     if (nguoihoatdong) {
         login.style.display = 'none';
         logout.style.display = 'flex';
@@ -145,6 +144,17 @@ window.isAdmin = function () {
             taikhoan.style.display = 'flex';
         }
     }
+
+    // Tùy chỉnh chỉ hiển thị tìm kiếm trong trang tuyển thông báo tuyển sinh
+    const search = document.getElementById('search');
+    const searchIcon = document.getElementById('searchIcon');
+    search.style.display = 'none';
+    searchIcon.style.display = 'none';
+    if (window.location.pathname === '/HTML/tuyensinh.html') {
+        // Đang ở trang tuyensinh.html
+        search.style.display = 'none';
+        searchIcon.style.display = 'flex';
+    } 
 }
 
 // Hiển thị bài đăng

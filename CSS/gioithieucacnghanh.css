@@ -1,11 +1,11 @@
-.grid-container {
+.cacnghanhdaotao {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 40px;
 }
 
-.card {
+.nghanh {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -15,31 +15,31 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card:hover {
+.nghanh:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.card img {
+.nghanh img {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
 }
 
-.card .date {
+.nghanh .date {
     color: #888;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.card h3 {
+.nghanh h3 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.card .read-more {
+.nghanh .read-more {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
@@ -47,6 +47,6 @@
     font-weight: bold;
 }
 
-.card .read-more:hover {
+.nghanh .read-more:hover {
     text-decoration: underline;
 }
