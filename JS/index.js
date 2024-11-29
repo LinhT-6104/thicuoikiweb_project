@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Trang chủ
     let trangchu = document.getElementById('trangchu');
-    trangchu.addEventListener('click', function() { window.location.href = '/HTML/trangchu.html'; });
+    trangchu.addEventListener('click', function() { window.location.href = '/index.html'; });
     
     // Liên hệ
     let cont = document.getElementById('cont');
