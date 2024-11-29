@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Hiển thị danh sách các tài khoản
 function themhang() {
     let danhsachnguoidung = down_local_user();
     let table = document.getElementById('bangthem');
@@ -174,6 +175,7 @@ function kiemtradangky() {
     // Ẩn form đăng ký
     document.getElementById("formthem").style.display = 'none';
 }
+
 // Hàm quản lý localStorage
 function down_local_ho_so() {
     return JSON.parse(localStorage.getItem('hoso')) || [];

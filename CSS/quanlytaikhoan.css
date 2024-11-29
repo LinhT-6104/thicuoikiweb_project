@@ -117,7 +117,7 @@ tbody tr:hover {
 /* Bố cục tổng thể */
 .post-container {
     padding: 30px;
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 900px;
     background: #FBFCFC;
     border-radius: 10px;

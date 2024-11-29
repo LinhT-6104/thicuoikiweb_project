@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '/index.html';
     });
 
-    // Tài khoản
+    // Thông tin tài khoản
     let taikhoan = document.getElementById('taikhoan');
     taikhoan.addEventListener('click', function() {
         window.location.href = '/HTML/thongtintaikhoan.html';
@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Hiển thị theo nội dung tìm kiếm
     searchIcon.addEventListener('click', function() {
-        searchPort();
+        timKiem();
     });
     searchBar.addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
-            searchPort();
+            timKiem();
         }
     });   
 
-    // Ngày tháng
+    // Hiển thị ngày tháng
     const dateDisplay = document.getElementById('date');
     dateDisplay.textContent = dateDate(); 
     
@@ -202,7 +202,7 @@ window.xem = function (i) {
 }
 
 // Tìm kiếm và hiển thị
-window.searchPort = function () {
+window.timKiem = function () {
     let searchBar = document.getElementById('search');
     let searchTerm = searchBar.value.toLowerCase();
     

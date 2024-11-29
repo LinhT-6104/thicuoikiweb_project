@@ -84,7 +84,8 @@
     font-size: 16px;
     border-top: 2px solid #EEE;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin-bottom: 0px;
 }
 
 /* Responsive adjustments */
