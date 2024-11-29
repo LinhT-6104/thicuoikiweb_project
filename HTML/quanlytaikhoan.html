@@ -19,7 +19,6 @@
         <ul class="menu1">
             <li><img src="/IMG/hnue_icon.png" alt=""></li>
             <li id="date"></li>
-            <!-- <li id="taikhoan"></li> -->
         </ul>
 
         <!-- Icon rút gọn -->
@@ -97,8 +96,9 @@
     <!-- code -->
     <div class="post-container">
         <h1>Quản lý tài khoản</h1>
+        
+        <!-- Thêm tài khoản -->
         <button id="themtaikhoan">Thêm tài khoản</button>
-
         <form action="" id="formthem">
             <h2>Thêm tài khoản</h2>
 
@@ -135,12 +135,13 @@
             <button id="btnthem" class="in" type="button" onclick="kiemtradangky()">Thêm</button>
         </form>
 
+        <!-- Sửa tài khoản -->
         <form action="" id="formsua">
             <h2>Sửa tài khoản</h2>
 
             <label for="renameID" class="group1">
-                <div>Sửa tên đăng nhập</div>
-                <input type="text" id="renameID" name="renameID" placeholder="Tên đăng nhập" required>
+                <div>Tên đăng nhập</div>
+                <input type="text" id="renameID" name="renameID" placeholder="Tên đăng nhập" readonly>
             </label>
             <br><br>
 

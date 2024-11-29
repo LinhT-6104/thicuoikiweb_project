@@ -34,6 +34,7 @@ function themhang() {
 };
 window.onload = themhang;
 
+// Sửa thông tin
 function hienthiformsua(i) {
     const formsua = document.getElementById('formsua');
     const isSearchBarVisible = formsua.style.display === 'block';
@@ -75,6 +76,7 @@ function suanguoidung(i) {
     danhsachnguoidung[i].pass = repass;
 
     save_local_user(danhsachnguoidung);
+    alert(`Cập nhật tài khoản ${nameID} thành công!`);
     themhang();
 
     // Ẩn bảng đăng sửa

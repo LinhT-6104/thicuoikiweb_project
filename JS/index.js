@@ -34,19 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Thanh tìm kiếm
     const searchIcon = document.getElementById('searchIcon');
     const searchBar  = document.getElementById('search');
-
     // Ẩn / hiện searchBar theo user
     searchIcon.addEventListener('click', function() {
         const isSearchBarVisible = searchBar.style.display === 'flex';
         searchBar.style.display  = isSearchBarVisible ? 'none' : 'flex'; 
     });
-    
-    // Hiển thị theo nội dung tìm kiếm
+    // Tìm kiếm 
     searchIcon.addEventListener('click', function() {
         timKiem();
     });
     searchBar.addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
+            navigateTo('/index.html');
             timKiem();
         }
     });   
@@ -137,13 +136,13 @@ window.isAdmin = function () {
     if (nguoihoatdong) {
         login.style.display = 'none';
         logout.style.display = 'flex';
-        taikhoan.style.display = 'flex';
 
         if (nguoihoatdong.nameID === 'tkadmin') {
             dangtints.style.display = 'flex';
             quanly.style.display = 'flex';
         } else {
             thongtinhs.style.display = 'flex';
+            taikhoan.style.display = 'flex';
         }
     }
 }

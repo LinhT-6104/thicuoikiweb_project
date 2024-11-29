@@ -21,6 +21,32 @@
     text-align: center;
 }
 
+/* Group input để giữ nhãn và trường nhập */
+.group-input {
+    display: inline-block;   /* Đảm bảo tất cả các phần tử nằm trên một dòng */
+    margin: 10px 15px;       /* Tạo khoảng cách giữa các trường */
+    width: 360px;            /* Cố định chiều rộng để đồng đều */
+    vertical-align: top;     /* Căn chỉnh trên cùng */
+}
+
+/* Căn chỉnh nhãn */
+.group-input label {
+    display: block;          /* Nhãn nằm trên trường nhập */
+    margin-bottom: 5px;      /* Khoảng cách giữa nhãn và trường */
+    font-weight: bold;       /* Đậm chữ cho nhãn */
+    color: #333;           /* Màu chữ */
+}
+
+/* Các trường nhập */
+.group-input input,
+.group-input select {
+    width: 100%;             /* Đảm bảo trường nhập vừa với nhóm */
+    height: 30px;            /* Chiều cao đồng đều */
+    box-sizing: border-box;  /* Bao gồm padding trong width */
+}
+
+
+/* Các trường input */
 .Dong1>input {
     margin: 10px 15px;
     width: 360px;

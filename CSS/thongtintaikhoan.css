@@ -9,15 +9,6 @@
     text-align: center;
 }
 
-h1, h2 {
-    
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
 h2 {
     font-family: 'Arial', sans-serif;
     font-size: 20px;
@@ -29,7 +20,7 @@ h2 {
 }
 
 /* Button */
-#btnsua{
+#btnupdate{
     width: 100px;
     height: 35px;
     padding: 7px;
@@ -43,12 +34,12 @@ h2 {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.2s;
 }
-#btnsua:hover {
+#btnupdate:hover {
     transform: translateY(-2px);
 }
 
 /* Form hiển thị */
-#formsua {
+#formthongtin {
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;

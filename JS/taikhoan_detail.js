@@ -1,19 +1,57 @@
-let danhsachnguoidung = down_local_user();
-let nguoihoatdong = JSON.parse(localStorage.getItem('nguoihoatdong'));
+document.addEventListener('DOMContentLoaded', function () {
+    let danhsachnguoidung = down_local_user();
+    let nguoihoatdong = JSON.parse(localStorage.getItem('nguoihoatdong'));
 
-let nameID = document.getElementById('renameID');
-let cccd = document.getElementById('recccd');
-let fullname = document.getElementById('refullname');
-let email = document.getElementById('reemail');
-let pass = document.getElementById('repass');
+    let nameID = document.getElementById('nameID');
+    let cccd = document.getElementById('cccd');
+    let fullname = document.getElementById('fullname');
+    let email = document.getElementById('email');
+    let pass = document.getElementById('pass');
 
-danhsachnguoidung.forEach((nguoidung, index) => {
-    let i = index;
-    if (nguoidung.nameID === nguoihoatdong.nameID) {
-        nameID.value = danhsachnguoidung[i].nameID;
-        cccd.value = danhsachnguoidung[i].cccd;
-        fullname.value = danhsachnguoidung[i].fullname;
-        email.value = danhsachnguoidung[i].email;
-        pass.value = danhsachnguoidung[i].pass;
+    let vitri;
+    danhsachnguoidung.forEach((nguoidung, index) => {
+        if (nguoidung.nameID === nguoihoatdong.nameID) {
+            vitri = index;
+            nameID.value = nguoidung.nameID;
+            cccd.value = nguoidung.cccd;
+            fullname.value = nguoidung.fullname;
+            email.value = nguoidung.email;
+            pass.value = nguoidung.pass;
+            return;
+        }
+    });
+
+    if (vitri === undefined) {
+        console.error('Không tìm thấy người dùng hoạt động trong danh sách.');
+        return;
+    }
+
+    const btnupdate = document.getElementById('btnupdate');
+    if (btnupdate) {
+        btnupdate.onclick = function () {
+            updatethongtin(vitri);
+        };
+    } else {
+        console.error('Không tìm thấy nút btnupdate trong DOM.');
+    }
+
+    // Cập nhật thông tin tài khoản
+    function updatethongtin(i) {
+        let nameID = document.getElementById('nameID').value;
+        let cccd = document.getElementById('cccd').value;
+        let fullname = document.getElementById('fullname').value;
+        let email = document.getElementById('email').value;
+        let pass = document.getElementById('pass').value;
+
+        let danhsachnguoidung = down_local_user();
+
+        danhsachnguoidung[i].nameID = nameID;
+        danhsachnguoidung[i].cccd = cccd;
+        danhsachnguoidung[i].fullname = fullname;
+        danhsachnguoidung[i].email = email;
+        danhsachnguoidung[i].pass = pass;
+
+        save_local_user(danhsachnguoidung);
+        alert(`Cập nhật tài khoản ${nameID} thành công!`);
     }
 });
