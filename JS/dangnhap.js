@@ -10,7 +10,7 @@ function dangnhaptk() {
     const danhsachnguoidung = down_local_user();
     const nguoihoatdong = { nameID, pass };
 
-    if (nameID === 'admin123' && pass === 'admin123'){
+    if (nameID === 'tkadmin' && pass === 'tkadmin'){
         localStorage.setItem('nguoihoatdong', JSON.stringify(nguoihoatdong))
         alert('Quản trị viên đăng nhập thành công!');
         console.log('Chuyển hướng đến trang chủ cho quản trị viên');

@@ -13,11 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '/index.html';
     });
 
+    // Tài khoản
+    let taikhoan = document.getElementById('taikhoan');
+    taikhoan.addEventListener('click', function() {
+        window.location.href = '/HTML/thongtintaikhoan.html';
+    });
+
     // Hiển thị tên tài khoản
     const nguoihoatdong = JSON.parse(localStorage.getItem('nguoihoatdong'));
     if (nguoihoatdong) {
         let taikhoan = document.getElementById('taikhoan');
-        taikhoan.innerText = `Xin chào, ${nguoihoatdong.nameID}`;
+        let icon = document.createElement('i');
+        icon.classList.add('fas', 'fa-user');
+
+        taikhoan.innerHTML = "";
+        taikhoan.appendChild(icon);
+        taikhoan.innerHTML += `${nguoihoatdong.nameID}`;
     }
 
     // Thanh tìm kiếm
@@ -112,6 +123,7 @@ window.isAdmin = function () {
     const thongtinhs = document.getElementById('thongtinhs');
     const login = document.getElementById('login');
     const logout = document.getElementById('logout');
+    const taikhoan = document.getElementById('taikhoan');
 
     // Mặc định ẩn tất cả
     if (dangtints) { dangtints.style.display = 'none'; }
@@ -119,13 +131,15 @@ window.isAdmin = function () {
     if (thongtinhs) { thongtinhs.style.display = 'none'; }
     if (login) { login.style.display = 'flex'; }
     if (logout) { logout.style.display = 'none'; }
+    if (taikhoan) { taikhoan.style.display = 'none'; }
     
 
     if (nguoihoatdong) {
         login.style.display = 'none';
         logout.style.display = 'flex';
+        taikhoan.style.display = 'flex';
 
-        if (nguoihoatdong.nameID === 'admin123') {
+        if (nguoihoatdong.nameID === 'tkadmin') {
             dangtints.style.display = 'flex';
             quanly.style.display = 'flex';
         } else {

@@ -16,7 +16,7 @@ html, body {
     height:250px;
 }
 
-#dangtints, #quanly, #thongtin, #logout {
+#dangtints, #quanly, #thongtin, #logout, #taikhoan {
     display: none; 
 }
 
@@ -63,10 +63,11 @@ html, body {
 
 /* #date {
     text-align: center;
+}*/
+#taikhoan i {
+    margin-right: 8px; /* Khoảng cách giữa icon và chữ */
+    font-size: 15px; /* Kích thước của icon */
 }
-#taikhoan {
-    text-align: center;
-} */
 
 /* Menu*/
 .menu {
@@ -229,6 +230,7 @@ html, body {
 /* menu right */
 .menu .login a,
 .menu .logout a,
+.menu .taikhoan a,
 .menu .cont a {
     display: flex;
     align-items: center;
@@ -238,6 +240,7 @@ html, body {
 
 .menu .login p,
 .menu .logout p,
+.menu .taikhoan p,
 .menu .cont p {
     margin-left: 5px;
 }

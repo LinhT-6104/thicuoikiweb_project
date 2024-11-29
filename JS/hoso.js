@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!nguoihoatdong) return;
 
-        if (nguoihoatdong.nameID === "admin123") {
+        if (nguoihoatdong.nameID === "tkadmin") {
             const hosochuyenhuong = JSON.parse(localStorage.getItem('hosochuyenhuong')) || null;
             if (hosochuyenhuong) {
                 fillData(hosochuyenhuong, null);

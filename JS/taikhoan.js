@@ -102,7 +102,7 @@ function kiemtradangky() {
         alert('Vui lòng điền mã căn cước công dân hợp lệ');
         return
     }
-    if (nameID === 'admin123') {
+    if (nameID === 'tkadmin') {
         alert('Không thể đăng ký tên tài khoản trên!');
         return
     }

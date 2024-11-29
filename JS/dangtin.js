@@ -199,7 +199,7 @@ function themhang() {
     table.innerHTML = '';
     var a = 1;
     danhsachbaidang.forEach((baidang, index) => {
-        if (baidang.nguoidang === 'admin123') {
+        if (baidang.nguoidang === 'tkadmin') {
             let row = table.insertRow();
 
             let cell1 = row.insertCell(0);
