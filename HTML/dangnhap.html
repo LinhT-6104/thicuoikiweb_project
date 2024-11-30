@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/index.css">
-    <link rel="stylesheet" href="/CSS/dangnhap.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/dangnhap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="/JS/index.js" defer></script>
-    <script src="/JS/dangnhap.js" defer></script>
+    <script src="../JS/index.js" defer></script>
+    <script src="../JS/dangnhap.js" defer></script>
     <title>Đăng nhập</title>
 </head>
 
@@ -16,7 +16,7 @@
     <!-- Thanh menu -->
     <div class="header">
         <ul class="menu1">
-            <li><img src="/IMG/hnue_icon.png" alt=""></li>
+            <li><img src="../IMG/hnue_icon.png" alt=""></li>
             <li id="date"></li>
         </ul>
 
@@ -25,12 +25,10 @@
 
         <!-- Menu -->
         <ul class="menu" id="menu">
-            <li id="left"> 
+            <li id="left">
                 <!-- Tìm kiếm -->
                 <li>
-                    <!-- input -->
                     <input type="text" id="search" class="search-bar" placeholder="Tìm kiếm...">
-                    <!-- icon -->
                     <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
                 </li>
 
@@ -39,12 +37,11 @@
                     <a href="#">Tuyển sinh</a>
                     <ul class="submenu">
                         <li id="tuyensinh"><a>Thông báo tuyển sinh</a></li>
-                        <li id="gioithieucacnghanh"><a>Giới thiệu các nghành</a></li>
+                        <li id="gioithieucacnghanh"><a>Giới thiệu các ngành</a></li>
                     </ul>
                 </li>
 
                 <!-- admin -->
-                <!-- Đăng tin tuyển sinh -->
                 <li id="dangtints"><a>Đăng tin</a></li>
 
                 <!-- Quản lý -->
@@ -54,37 +51,35 @@
                         <li id="quanlihs"><a>Quản lý hồ sơ</a></li>
                         <li id="quanlitk"><a>Quản lý tài khoản</a></li>
                     </ul>
-                </li> 
-                <!--  -->
+                </li>
 
                 <!-- user -->
-                <!-- Thông tin -->
-                <li id="thongtinhs"><a href="/HTML/thongtinhoso.html">Thông tin hồ sơ</a></li>
-                <!--  -->
+                <li id="thongtinhs"><a>Thông tin hồ sơ</a></li>
 
                 <!-- Trang chủ -->
-                <li id="trangchu"><a>Trang chủ</a></li>
+                <li id="trangchu">
+                    <a>Trang chủ</a>
+                </li>
             </li>
 
             <li id="right">
-                <li id="taikhoan">
-                    
-                </li>
+                <li id="taikhoan"></li>
+                
                 <li class="login">
                     <a href="#" id="login">
-                        <i class="fas fa-user" class="logo"></i>
+                        <i class="fas fa-user"></i>
                         <p id="hide">Đăng nhập</p>
                     </a>
                 </li>
                 <li class="logout">
                     <a href="#" id="logout">
-                        <i class="fas fa-sign-out-alt" class="logo"></i>
+                        <i class="fas fa-sign-out-alt"></i>
                         <p id="hide">Đăng xuất</p>
                     </a>
                 </li>
                 <li class="cont">
                     <a id="cont">
-                        <i class="fas fa-envelope" class="logo"></i>
+                        <i class="fas fa-envelope"></i>
                         <p id="hide">Liên hệ</p>
                     </a>
                 </li>
@@ -95,10 +90,10 @@
     <!-- code -->
     <div class="dangnhap">
         <div class="left_dangnhap">
-            <img src="/IMG/Banner.jpg" alt="">
+            <img src="../IMG/Banner.jpg" alt="">
         </div>
         <div class="right_dangnhap">
-            <img src="/IMG/hnue_icon.png" alt="">
+            <img src="../IMG/hnue_icon.png" alt="">
             <div class="title">
                 <h4>TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI</h4>
                 <h2>CỔNG THÔNG TIN TUYỂN SINH</h2>
@@ -114,7 +109,7 @@
     
                 <div class="dn3">
                     <span>Bạn chưa có tài khoản?</span>
-                    <a onclick="navigateTo('/HTML/dangky.html')">Đăng ký</a>
+                    <a onclick="navigateTo('dangky.html')">Đăng ký</a>
                 </div>
                 <hr>
             </div>

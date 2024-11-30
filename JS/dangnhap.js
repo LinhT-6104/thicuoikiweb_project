@@ -14,7 +14,7 @@ function dangnhaptk() {
         localStorage.setItem('nguoihoatdong', JSON.stringify(nguoihoatdong))
         alert('Quản trị viên đăng nhập thành công!');
         console.log('Chuyển hướng đến trang chủ cho quản trị viên');
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
     }
     else{
         const user = danhsachnguoidung.find(user => user.nameID === nameID && user.pass === pass);
@@ -22,7 +22,7 @@ function dangnhaptk() {
             localStorage.setItem('nguoihoatdong', JSON.stringify(user));
             alert('Đăng nhập thành công!');
             console.log('Chuyển hướng đến trang chủ cho người dùng');
-            window.location.href = '/index.html';
+            window.location.href = 'index.html';
         } else {
             alert('Sai tài khoản hoặc mật khẩu!');
         }

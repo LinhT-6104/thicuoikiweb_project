@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Đăng nhập
     let dangNhap = document.getElementById('login');
-    dangNhap.addEventListener('click', function() { window.location.href = '/HTML/dangnhap.html'; });
+    dangNhap.addEventListener('click', function() { window.location.href = 'dangnhap.html'; });
 
     // Đăng xuất
     let dangXuat = document.getElementById('logout');
     dangXuat.addEventListener('click', function() {
         localStorage.removeItem('nguoihoatdong');
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
     });
 
     // Hiển thị tên tài khoản
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Thông tin tài khoản
     let taikhoan = document.getElementById('taikhoan');
     taikhoan.addEventListener('click', function() {
-        window.location.href = '/HTML/thongtintaikhoan.html';
+        window.location.href = 'thongtintaikhoan.html';
     });
 
     // Thanh tìm kiếm
@@ -57,33 +57,33 @@ document.addEventListener('DOMContentLoaded', function() {
     let tuyensinh = document.getElementById('tuyensinh');
     let gioithieucacnghanh = document.getElementById('gioithieucacnghanh');
 
-    tuyensinh.addEventListener('click', function() { window.location.href = '/HTML/tuyensinh.html'; });
-    gioithieucacnghanh.addEventListener('click', function() { window.location.href = '/HTML/gioithieucacnghanh.html'; });
+    tuyensinh.addEventListener('click', function() { window.location.href = 'tuyensinh.html'; });
+    gioithieucacnghanh.addEventListener('click', function() { window.location.href = 'gioithieucacnghanh.html'; });
 
     // admin
     // Đăng tin tuyển sinh
     let dangtints = document.getElementById('dangtints');
-    dangtints.addEventListener('click', function() { window.location.href = '/HTML/dangtin.html'; });
+    dangtints.addEventListener('click', function() { window.location.href = 'dangtin.html'; });
     
     // Quản lý
     let quanlihs = document.getElementById('quanlihs');
     let quanlitk = document.getElementById('quanlitk');
 
-    quanlihs.addEventListener('click', function() { window.location.href = '/HTML/quanlyhoso.html'; });
-    quanlitk.addEventListener('click', function() { window.location.href = '/HTML/quanlytaikhoan.html'; }); 
+    quanlihs.addEventListener('click', function() { window.location.href = 'quanlyhoso.html'; });
+    quanlitk.addEventListener('click', function() { window.location.href = 'quanlytaikhoan.html'; }); 
 
     // user
     // Thông tin 
     let thongtinhs = document.getElementById('thongtinhs');
-    thongtinhs.addEventListener('click', function() { window.location.href = '/HTML/thongtinhoso.html'; });
+    thongtinhs.addEventListener('click', function() { window.location.href = 'thongtinhoso.html'; });
 
     // Trang chủ
     let trangchu = document.getElementById('trangchu');
-    trangchu.addEventListener('click', function() { window.location.href = '/index.html'; });
+    trangchu.addEventListener('click', function() { window.location.href = 'index.html'; });
     
     // Liên hệ
     let cont = document.getElementById('cont');
-    cont.addEventListener('click', function() { window.location.href = '/HTML/lienhe.html'; }); 
+    cont.addEventListener('click', function() { window.location.href = 'lienhe.html'; }); 
 
     // Hiển thị bài đăng
     hienthitatca();
@@ -150,7 +150,7 @@ window.isAdmin = function () {
     const searchIcon = document.getElementById('searchIcon');
     search.style.display = 'none';
     searchIcon.style.display = 'none';
-    if (window.location.pathname === '/HTML/tuyensinh.html') {
+    if (window.location.pathname === 'tuyensinh.html') {
         // Đang ở trang tuyensinh.html
         search.style.display = 'none';
         searchIcon.style.display = 'flex';
@@ -207,7 +207,7 @@ window.themKhoi = function (baidang, index) {
 // Xem bài đăng
 window.xem = function (i) {
     localStorage.setItem('baidangchuyenhuong', i);
-    window.location.href = "/HTML/tus.html";
+    window.location.href = "tus.html";
 }
 
 // Tìm kiếm và hiển thị

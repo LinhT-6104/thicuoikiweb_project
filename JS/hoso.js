@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const danhsachhoso = down_local_ho_so();
         const hoso = danhsachhoso[index];
         localStorage.setItem('hosochuyenhuong', JSON.stringify(hoso));
-        window.location.href = '/HTML/thongtinhoso.html';
+        window.location.href = 'thongtinhoso.html';
     }
     // Hàm cập nhật trạng thái hồ sơ
     function updateTrangThai(index, trangthai) {
