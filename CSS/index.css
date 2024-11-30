@@ -105,8 +105,8 @@ html, body {
 }
 
 .submenu {
-    background-color: coral;
-    border: 2px solid black;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
     box-shadow: 10px 5px 12px 0px rgb(194, 220, 255);
     list-style: none;
     padding: 2%;
@@ -124,15 +124,15 @@ html, body {
 }
 
 .submenu > li > a {
-    color: black;
+    color: #333;  
     display: block;
     padding: 10px 20px;
     text-decoration: none;
 }
 
 .submenu > li > a:hover {
-    background: lightgrey;
-    color: white;
+    background: #ddd; 
+    color: #09447E;  
     border-radius: 10px;
 }
 
