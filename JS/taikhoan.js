@@ -76,7 +76,7 @@ function suanguoidung(i) {
     danhsachnguoidung[i].pass = repass;
 
     save_local_user(danhsachnguoidung);
-    alert(`Cập nhật tài khoản ${nameID} thành công!`);
+    alert(`Cập nhật tài khoản ${renameID} thành công!`);
     themhang();
 
     // Ẩn bảng đăng sửa

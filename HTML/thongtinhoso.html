@@ -95,6 +95,7 @@
     <!-- code -->
     <div class="dkithongtin">
         <h2>THÔNG TIN THÍ SINH</h2>
+        <hr style="width: 250px;">
         <h2 id="trangthaihs">Yêu cầu nhập thông tin</h2>
         <hr>
         <h4>1. Thông tin cá nhân</h4>
@@ -179,22 +180,25 @@
                     <option value="" selected hidden>Tỉnh/thành thường trú</option>
                 </select>
             </div>
-            
+
             <div class="group-input">
                 <label for="quan_huyen_thuongtru">Quận/huyện thường trú</label>
-                <input id="quan_huyen_thuongtru" name="quan_huyen_thuongtru" type="text" placeholder="Quận/huyện thường trú" required>
+                <input id="quan_huyen_thuongtru" name="quan_huyen_thuongtru" type="text"
+                    placeholder="Quận/huyện thường trú" required>
             </div>
 
             <div class="group-input">
                 <label for="phuong_xa_thuongtru">Phường/xã thường trú</label>
-                <input id="phuong_xa_thuongtru" name="phuong_xa_thuongtru" type="text" placeholder="Phường/xã thường trú" required>
+                <input id="phuong_xa_thuongtru" name="phuong_xa_thuongtru" type="text"
+                    placeholder="Phường/xã thường trú" required>
             </div>
         </form>
 
         <form action="" class="Dong6">
             <div class="group-input" style="width: 90%;">
                 <label for="diachicuthe">Địa chỉ cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn</label>
-                <input id="diachicuthe" name="diachicuthe" type="text" placeholder="Địa chỉ cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn" required>
+                <input id="diachicuthe" name="diachicuthe" type="text"
+                    placeholder="Địa chỉ cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn" required>
             </div>
         </form>
 
@@ -202,26 +206,100 @@
         <form action="" class="Dong7">
             <div class="group-input">
                 <label for="tinh_thanh_lienlac">Tỉnh/thành địa chỉ liên lạc/label>
-                <input id="tinh_thanh_lienlac" name="tinh_thanh_lienlac" type="text" placeholder="Tỉnh/thành địa chỉ liên lạc" required>
+                    <input id="tinh_thanh_lienlac" name="tinh_thanh_lienlac" type="text"
+                        placeholder="Tỉnh/thành địa chỉ liên lạc" required>
             </div>
 
             <div class="group-input">
                 <label for="quan_huyen_lienlac">Quận/huyện địa chỉ liên lạc</label>
-                <input id="quan_huyen_lienlac" name="quan_huyen_lienlac" type="text" placeholder="Quận/huyện địa chỉ liên lạc" required>
+                <input id="quan_huyen_lienlac" name="quan_huyen_lienlac" type="text"
+                    placeholder="Quận/huyện địa chỉ liên lạc" required>
             </div>
 
             <div class="group-input">
                 <label for="phuong_xa_lienlac">Phường/xã địa chỉ liên lạc</label>
-                <input id="phuong_xa_lienlac" name="phuong_xa_lienlac" type="text" placeholder="Phường/xã địa chỉ liên lạc" required>
+                <input id="phuong_xa_lienlac" name="phuong_xa_lienlac" type="text"
+                    placeholder="Phường/xã địa chỉ liên lạc" required>
             </div>
         </form>
 
         <form action="" class="Dong8">
             <div class="group-input" style="width: 90%;">
                 <label for="diachilienlac">Địa chỉ liên lạc cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn</label>
-                <input id="diachilienlac" name="diachilienlac" type="text" placeholder="Địa chỉ liên lạc cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn" required>
+                <input id="diachilienlac" name="diachilienlac" type="text"
+                    placeholder="Địa chỉ liên lạc cụ thể: Số nhà, tên đường, tổ/xóm, khu phố, thôn" required>
             </div>
         </form>
+
+        <!-- bonus -->
+        <h4>5. Thông tin học tập</h4>
+        <form class="Dong9">
+            <div class="group-input">
+                <label for="truong_thpt">Trường THPT đã học</label>
+                <input id="truong_thpt" type="text" placeholder="Tên trường THPT" required>
+            </div>
+            <div class="group-input">
+                <label for="nam_totnghiep">Năm tốt nghiệp</label>
+                <input id="nam_totnghiep" type="text" placeholder="Năm tốt nghiệp" required>
+            </div>
+        </form>
+
+        <h4>6. Nguyện vọng xét tuyển</h4>
+        <form class="Dong10">
+            <div class="group-input">
+                <label for="nganh_dang_ky">Ngành đăng ký</label>
+                <select id="nganh_dang_ky" required>
+                    <option value="" selected hidden>Chọn ngành đăng ký</option>
+                    <option value="nganh1">Ngành Công nghệ thông tin</option>
+                    <option value="nganh2">Ngành Sư phạm tin học</option>
+                    <option value="nganh1">Ngành Sư phạm toán học</option>
+                    <option value="nganh2">Ngành Sư phạm vật lý</option>
+                    <option value="nganh1">Ngành Sư phạm hóa học</option>
+                </select>
+            </div>
+            <div class="group-input">
+                <label for="tohop_xettuyen">Tổ hợp môn xét tuyển</label>
+                <select id="tohop_xettuyen" required>
+                    <option value="" selected hidden>Chọn tổ hợp xét tuyển</option>
+                    <option value="A00">A00 (Toán, Lý, Hóa)</option>
+                    <option value="A01">A01 (Toán, Vật lý, Tiếng Anh)</option>
+                    <option value="B00">B00 (Toán, Hóa học, Sinh học)</option>
+                    <option value="B01">B01 (Toán, Sinh học, Lịch sử)</option>
+                    <option value="C00">C00 (Văn, Sử, Địa)</option>
+                    <option value="C01">C01 (Văn, Toán, Vật lí)</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>7. Thông tin ưu tiên</h4>
+        <form class="Dong11">
+            <div class="group-input">
+                <label for="doi_tuong_uu_tien">Đối tượng ưu tiên</label>
+                <select id="doi_tuong_uu_tien">
+                    <option value="" selected hidden>Chọn đối tượng ưu tiên</option>
+                    <option value="0">Không có ưu tiên</option>
+                    <option value="1">Diện chính sách</option>
+                </select>
+            </div>
+            <div class="group-input">
+                <label for="khu_vuc_uu_tien">Khu vực ưu tiên</label>
+                <select id="khu_vuc_uu_tien">
+                    <option value="" selected hidden>Chọn khu vực ưu tiên</option>
+                    <option value="KV1">KV1</option>
+                    <option value="KV2">KV2</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>8. Ảnh cá nhân</h4>
+        <form class="Dong12">
+            <div class="group-input" style="width: 50%;">
+                <label for="anh_the">Ảnh thẻ (3x4 hoặc 4x6)</label>
+                <input id="anh_the" type="file" accept="image/*" required>
+                <img id="anh_the_preview" alt="Ảnh thẻ">
+            </div>
+        </form>
+
 
         <button id="luu" onclick="luuhoso()">Lưu</button>
     </div>

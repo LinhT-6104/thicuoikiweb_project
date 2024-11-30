@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <td>${hoso.ngaysinh}</td>
             <td>${hoso.gioitinh}</td>
             <td>${hoso.sodt}</td>
+            <td>${hoso.nganh_dang_ky}</td>
             <td>${hoso.trangthai}</td>
             <td>
                 <button onclick="duyet(${index})">Duyệt</button>
@@ -163,6 +164,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Hàm lưu hồ sơ
+    // Cập nhật và hiển thị ảnh thẻ 
+    const anhTheInput = document.getElementById('anh_the');
+    const anhThePreview = document.getElementById('anh_the_preview');
+
+    // Thêm sự kiện cho input file
+    anhTheInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                anhThePreview.src = e.target.result;
+                anhThePreview.style.display = 'block';
+            }
+
+            reader.readAsDataURL(file);
+        }
+    });
+    // lưu hồ sơ
     window.luuhoso = function () {
         const hoten = document.getElementById('hoten').value.trim();
         const ngaysinh = document.getElementById('ngaysinh').value.trim();
@@ -172,22 +192,38 @@ document.addEventListener('DOMContentLoaded', function () {
         const gioitinh = document.getElementById('gioitinh').value.trim();
         const noisinh = document.getElementById('noisinh').value.trim();
         const dantoc = document.getElementById('dantoc').value.trim();
+
         const sodt = document.getElementById('sodt').value.trim();
         const sodt_nguoithan = document.getElementById('sodt_nguoithan').value.trim();
         const email = document.getElementById('email').value.trim();
+
         const tinh_thanh_thuongtru = document.getElementById('tinh_thanh_thuongtru').value.trim();
         const quan_huyen_thuongtru = document.getElementById('quan_huyen_thuongtru').value.trim();
         const phuong_xa_thuongtru = document.getElementById('phuong_xa_thuongtru').value.trim();
         const diachicuthe = document.getElementById('diachicuthe').value.trim();
+
         const tinh_thanh_lienlac = document.getElementById('tinh_thanh_lienlac').value.trim();
         const quan_huyen_lienlac = document.getElementById('quan_huyen_lienlac').value.trim();
         const phuong_xa_lienlac = document.getElementById('phuong_xa_lienlac').value.trim();
         const diachilienlac = document.getElementById('diachilienlac').value.trim();
 
+        const truong_thpt = document.getElementById('truong_thpt').value.trim();
+        const nam_totnghiep = document.getElementById('nam_totnghiep').value.trim();
+
+        const nganh_dang_ky = document.getElementById('nganh_dang_ky').value.trim();
+        const tohop_xettuyen = document.getElementById('tohop_xettuyen').value.trim();
+
+        const doi_tuong_uu_tien = document.getElementById('doi_tuong_uu_tien').value.trim();
+        const khu_vuc_uu_tien = document.getElementById('khu_vuc_uu_tien').value.trim();
+
+        const anhTheInput = document.getElementById('anh_the');
+        const anhThePreview = document.getElementById('anh_the_preview');
+
         // Kiểm tra tất cả trường có dữ liệu
         if (!hoten || !ngaysinh || !socccd || !ngaycap || !noicap || !gioitinh || !noisinh || !dantoc ||
             !sodt || !sodt_nguoithan || !email || !tinh_thanh_thuongtru || !quan_huyen_thuongtru || !phuong_xa_thuongtru ||
-            !diachicuthe || !tinh_thanh_lienlac || !quan_huyen_lienlac || !phuong_xa_lienlac || !diachilienlac) {
+            !diachicuthe || !tinh_thanh_lienlac || !quan_huyen_lienlac || !phuong_xa_lienlac || !diachilienlac ||
+            !truong_thpt || !nam_totnghiep || !nganh_dang_ky || !tohop_xettuyen || !anhTheInput.files[0]) {
             alert("Vui lòng điền đầy đủ thông tin.");
             return;
         }
@@ -229,6 +265,8 @@ document.addEventListener('DOMContentLoaded', function () {
             hoten, ngaysinh, socccd, ngaycap, noicap, gioitinh, noisinh, dantoc, sodt, sodt_nguoithan, email,
             tinh_thanh_thuongtru, quan_huyen_thuongtru, phuong_xa_thuongtru, diachicuthe,
             tinh_thanh_lienlac, quan_huyen_lienlac, phuong_xa_lienlac, diachilienlac,
+            truong_thpt, nam_totnghiep, nganh_dang_ky, tohop_xettuyen, doi_tuong_uu_tien, khu_vuc_uu_tien,
+            anh_the: anhThePreview.src, 
             trangthai: "Chờ duyệt"
         };
 
@@ -246,7 +284,6 @@ document.addEventListener('DOMContentLoaded', function () {
         themhangall();
     }
     function isValidDate(dateStr) {
-        // Tách chuỗi theo dấu "/"
         const parts = dateStr.split('/');
 
         // Kiểm tra nếu không đủ 3 phần (ngày, tháng, năm)
@@ -260,10 +297,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Kiểm tra giá trị ngày, tháng, năm
         if (
-            isNaN(day) || isNaN(month) || isNaN(year) || // Phải là số
-            day < 1 || day > 31 ||                      // Ngày trong khoảng 1-31
-            month < 1 || month > 12 ||                  // Tháng trong khoảng 1-12
-            year < 1900 || year > new Date().getFullYear() // Năm từ 1900 đến năm hiện tại
+            isNaN(day) || isNaN(month) || isNaN(year) || 
+            day < 1 || day > 31 ||                      
+            month < 1 || month > 12 ||                  
+            year < 1900 || year > new Date().getFullYear() 
         ) {
             return false;
         }
@@ -364,12 +401,26 @@ document.addEventListener('DOMContentLoaded', function () {
             { id: 'quan_huyen_lienlac', value: hoso?.quan_huyen_lienlac },
             { id: 'phuong_xa_lienlac', value: hoso?.phuong_xa_lienlac },
             { id: 'diachilienlac', value: hoso?.diachilienlac },
+            { id: 'truong_thpt', value: hoso?.truong_thpt },
+            { id: 'nam_totnghiep', value: hoso?.nam_totnghiep },
+            { id: 'nganh_dang_ky', value: hoso?.nganh_dang_ky },
+            { id: 'tohop_xettuyen', value: hoso?.tohop_xettuyen },
+            { id: 'doi_tuong_uu_tien', value: hoso?.doi_tuong_uu_tien },
+            { id: 'khu_vuc_uu_tien', value: hoso?.khu_vuc_uu_tien },
+            { id: 'anh_the', value: hoso?.anh_the }
         ];
 
         fields.forEach(field => {
             const element = document.getElementById(field.id);
             if (element) {
-                element.value = field.value || "";
+                if (field.id === "anh_the" && field.value) {
+                    // Hiển thị ảnh thẻ nếu có
+                    const imgElement = document.getElementById("anh_the_preview");
+                    imgElement.src = field.value;
+                    imgElement.style.display = "block"; // Hiển thị ảnh
+                } else {
+                    element.value = field.value || "";
+                }
             }
         });
 
@@ -382,9 +433,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const nguoihoatdong = JSON.parse(localStorage.getItem('nguoihoatdong')) || null;
         const danhsachnguoidung = down_local_user();
         const danhsachhoso = down_local_ho_so();
-
+    
         if (!nguoihoatdong) return;
-
+    
         if (nguoihoatdong.nameID === "tkadmin") {
             const hosochuyenhuong = JSON.parse(localStorage.getItem('hosochuyenhuong')) || null;
             if (hosochuyenhuong) {
@@ -393,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             const taikhoan = danhsachnguoidung.find(user => user.nameID === nguoihoatdong.nameID);
             const hosothisinh = danhsachhoso.find(hoso => hoso.socccd === taikhoan?.cccd);
-
+    
             if (hosothisinh) {
                 fillData(hosothisinh, taikhoan);
             }

@@ -249,7 +249,76 @@ html, body {
     display: none;
 }
 
-/* nội dung bài đăng */
+/* Giới thiệu */
+.gioithieu {
+    width: 80%;
+    padding: 40px 10%;
+    text-align: center;
+    background-color: #f9f9f9; /* Thêm màu nền nhẹ cho phần giới thiệu */
+    border-radius: 10px; /* Bo góc phần giới thiệu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng cho phần giới thiệu */
+}
+
+.gioithieu-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.gioithieu-img:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to hình ảnh khi hover */
+}
+
+.introduction h1 {
+    color: #09447E;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.introduction p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.introduction h2 {
+    color: #09447E;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.introduction ul {
+    list-style-type: square;
+    color: #333;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 34% 30px 34%;
+}
+
+.introduction a.contact-btn {
+    padding: 12px 25px;
+    background-color: #09447E;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.introduction a.contact-btn:hover {
+    background-color: #246BA5;
+}
+
+
+/* Nội dung bài đăng */
 .content {
     display: flex;
     padding: 20px;

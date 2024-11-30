@@ -13,12 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '/index.html';
     });
 
-    // Thông tin tài khoản
-    let taikhoan = document.getElementById('taikhoan');
-    taikhoan.addEventListener('click', function() {
-        window.location.href = '/HTML/thongtintaikhoan.html';
-    });
-
     // Hiển thị tên tài khoản
     const nguoihoatdong = JSON.parse(localStorage.getItem('nguoihoatdong'));
     if (nguoihoatdong) {
@@ -30,6 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
         taikhoan.appendChild(icon);
         taikhoan.innerHTML += `${nguoihoatdong.nameID}`;
     }
+
+    // Thông tin tài khoản
+    let taikhoan = document.getElementById('taikhoan');
+    taikhoan.addEventListener('click', function() {
+        window.location.href = '/HTML/thongtintaikhoan.html';
+    });
 
     // Thanh tìm kiếm
     const searchIcon = document.getElementById('searchIcon');

@@ -118,3 +118,11 @@
 #dangky {
     margin: -10px;   
 }
+
+#anh_the_preview {
+    display: none; 
+    margin-top: 10px; 
+    max-width: 200px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
