@@ -135,13 +135,13 @@ window.isAdmin = function () {
     if (nguoihoatdong) {
         login.style.display = 'none';
         logout.style.display = 'flex';
+        taikhoan.style.display = 'flex';
 
         if (nguoihoatdong.nameID === 'tkadmin') {
-            dangtints.style.display = 'flex';
             quanly.style.display = 'flex';
+            dangtints.style.display = 'flex';
         } else {
             thongtinhs.style.display = 'flex';
-            taikhoan.style.display = 'flex';
         }
     }
 
