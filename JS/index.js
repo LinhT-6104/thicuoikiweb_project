@@ -150,11 +150,13 @@ window.isAdmin = function () {
     const searchIcon = document.getElementById('searchIcon');
     search.style.display = 'none';
     searchIcon.style.display = 'none';
-    if (window.location.pathname === 'tuyensinh.html') {
-        // Đang ở trang tuyensinh.html
-        search.style.display = 'none';
-        searchIcon.style.display = 'flex';
-    } 
+    if (window.location.pathname.includes('tuyensinh.html')) {
+        search.style.display = 'none';  // Ẩn phần tìm kiếm
+        searchIcon.style.display = 'block';  // Hiển thị searchIcon
+    } else {
+        search.style.display = 'none';  // Hiển thị phần tìm kiếm nếu không ở trang tuyensinh.html
+        searchIcon.style.display = 'none';  // Ẩn searchIcon nếu không ở trang tuyensinh.html
+    }
 }
 
 // Hiển thị bài đăng
