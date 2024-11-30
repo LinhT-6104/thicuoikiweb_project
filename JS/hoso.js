@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!hoten || !ngaysinh || !socccd || !ngaycap || !noicap || !gioitinh || !noisinh || !dantoc ||
             !sodt || !sodt_nguoithan || !email || !tinh_thanh_thuongtru || !quan_huyen_thuongtru || !phuong_xa_thuongtru ||
             !diachicuthe || !tinh_thanh_lienlac || !quan_huyen_lienlac || !phuong_xa_lienlac || !diachilienlac ||
-            !truong_thpt || !nam_totnghiep || !nganh_dang_ky || !tohop_xettuyen || !anhTheInput.files[0]) {
+            !truong_thpt || !nam_totnghiep || !nganh_dang_ky || !tohop_xettuyen) {
             alert("Vui lòng điền đầy đủ thông tin.");
             return;
         }
