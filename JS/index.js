@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Kiểm tra đăng nhập
     isAdmin();  // Kiểm tra tài khoản
 
     // Đăng nhập
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Trang chủ
     let trangchu = document.getElementById('trangchu');
-    trangchu.addEventListener('click', function() { window.location.href = 'index.html'; });
+    trangchu.addEventListener('click', function() { window.location.href = nguoihoatdong ? 'trangchu.html' : 'index.html'; });
     
     // Liên hệ
     let cont = document.getElementById('cont');
@@ -89,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     hienthitatca();
 });
 
-// TODO: Tìm hiểu thêm
 // Điều chỉnh thanh menu theo width
 window.toggleMenu = function () {
     const menu = document.getElementById('menu');
