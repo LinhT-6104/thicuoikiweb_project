@@ -169,19 +169,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const anhThePreview = document.getElementById('anh_the_preview');
 
     // Thêm sự kiện cho input file
-    anhTheInput.addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-                anhThePreview.src = e.target.result;
-                anhThePreview.style.display = 'block';
+    if (anhTheInput) {
+        anhTheInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    anhThePreview.src = e.target.result;
+                    anhThePreview.style.display = 'block';
+                }
+    
+                reader.readAsDataURL(file);
             }
-
-            reader.readAsDataURL(file);
-        }
-    });
+        });
+    }
     // lưu hồ sơ
     window.luuhoso = function () {
         const hoten = document.getElementById('hoten').value.trim();
